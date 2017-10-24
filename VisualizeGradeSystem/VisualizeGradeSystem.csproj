@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9005B87E-BEAD-4234-9A3A-EEA8ABB84F54}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisualizeGradeSystem</RootNamespace>
+    <AssemblyName>VisualizeGradeSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI">
+      <HintPath>..\..\NoLoginVideoSystem\GYPACZ_NoLogin\GYPACZ_NoLogin\VideoSystem\bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\..\NoLoginVideoSystem\GYPACZ_NoLogin\GYPACZ_NoLogin\VideoSystem\bin\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\..\NoLoginVideoSystem\GYPACZ_NoLogin\GYPACZ_NoLogin\VideoSystem\bin\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\..\NoLoginVideoSystem\GYPACZ_NoLogin\GYPACZ_NoLogin\VideoSystem\bin\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TeacherController.cs" />
+    <Compile Include="Controllers\VerifyCodeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Score\Score.cs" />
+    <Compile Include="Models\Score\ScoreContext.cs" />
+    <Compile Include="Models\User\User.cs" />
+    <Compile Include="Models\User\UserContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\filters\UserAuthorizeAttribute.cs" />
+    <Compile Include="Utils\ReadExcel.cs" />
+    <Compile Include="Utils\Uploader.cs" />
+    <Compile Include="Utils\ValidateCode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Resources\css\login-register.css" />
+    <Content Include="Resources\css\themify-icons.css" />
+    <Content Include="Resources\css\themify\themify.svg" />
+    <Content Include="Resources\img\back.psd" />
+    <Content Include="Resources\Plugin\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Resources\Plugin\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Resources\Plugin\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Resources\Plugin\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Resources\Plugin\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Resources\Plugin\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Resources\Plugin\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Resources\Plugin\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Resources\Plugin\jBox\LGPL-LICENSE" />
+    <Content Include="Resources\Plugin\jBox\MIT-LICENSE" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\OneNote 目录.onetoc2" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\OneNote 目录.onetoc2" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\Desktop.ini" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\Thumbs.db" />
+    <Content Include="Resources\Plugin\WebUploader\README.md" />
+    <Content Include="Resources\css\themify\.DS_Store" />
+    <Content Include="Resources\css\themify\themify.eot" />
+    <Content Include="Resources\css\themify\themify.ttf" />
+    <Content Include="Resources\css\themify\themify.woff" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Resources\css\app.css" />
+    <Content Include="Resources\css\contact.css" />
+    <Content Include="Resources\css\login.css" />
+    <Content Include="Resources\css\main.css" />
+    <Content Include="Resources\css\myvideo.css" />
+    <Content Include="Resources\css\product.css" />
+    <Content Include="Resources\css\registe.css" />
+    <Content Include="Resources\css\styles.css" />
+    <Content Include="Resources\css\video.css" />
+    <Content Include="Resources\img\404.jpg" />
+    <Content Include="Resources\img\appimg.png" />
+    <Content Include="Resources\img\backlogin.JPG" />
+    <Content Include="Resources\img\back_index.jpg" />
+    <Content Include="Resources\img\bg.jpg" />
+    <Content Include="Resources\img\company\1.jpg" />
+    <Content Include="Resources\img\company\2.jpg" />
+    <Content Include="Resources\img\company\3.jpg" />
+    <Content Include="Resources\img\company\4.jpg" />
+    <Content Include="Resources\img\company\5.jpg" />
+    <Content Include="Resources\img\company\6.jpg" />
+    <Content Include="Resources\img\company\7.jpg" />
+    <Content Include="Resources\img\company\8.jpg" />
+    <Content Include="Resources\img\company\ghpa.png" />
+    <Content Include="Resources\img\company\未标题-1.png" />
+    <Content Include="Resources\img\logo.gif" />
+    <Content Include="Resources\img\logo.ico" />
+    <Content Include="Resources\img\logo.png" />
+    <Content Include="Resources\img\logo1.jpg" />
+    <Content Include="Resources\img\logo2.png" />
+    <Content Include="Resources\img\logo_white.png" />
+    <Content Include="Resources\img\manager.png" />
+    <Content Include="Resources\img\products\0.jpg" />
+    <Content Include="Resources\img\products\1.jpg" />
+    <Content Include="Resources\img\products\2.jpg" />
+    <Content Include="Resources\img\products\3.jpg" />
+    <Content Include="Resources\img\products\4.jpg" />
+    <Content Include="Resources\img\products\5.jpg" />
+    <Content Include="Resources\img\products\6.jpg" />
+    <Content Include="Resources\img\products\7.jpg" />
+    <Content Include="Resources\img\products\8.jpg" />
+    <Content Include="Resources\img\qhpa.jpg" />
+    <Content Include="Resources\img\qq.png" />
+    <Content Include="Resources\img\tip.png" />
+    <Content Include="Resources\img\video_image\1.png" />
+    <Content Include="Resources\img\video_image\2.png" />
+    <Content Include="Resources\img\video_image\3.png" />
+    <Content Include="Resources\img\video_image\4.png" />
+    <Content Include="Resources\img\video_image\5.png" />
+    <Content Include="Resources\img\video_image\6.png" />
+    <Content Include="Resources\img\video_image\play.jpg" />
+    <Content Include="Resources\img\video_image\play.png" />
+    <Content Include="Resources\img\video_image\play1.png" />
+    <Content Include="Resources\img\video_image\play2.png" />
+    <Content Include="Resources\img\video_image\play_icon.png" />
+    <Content Include="Resources\img\video_img.jpeg" />
+    <Content Include="Resources\img\weixin.png" />
+    <Content Include="Resources\img\welcome - 副本.JPG" />
+    <Content Include="Resources\img\welcome.jpg" />
+    <Content Include="Resources\img\welcome2.JPG" />
+    <Content Include="Resources\img\welcome_ph1.jpg" />
+    <Content Include="Resources\img\welcome_ph3.png" />
+    <Content Include="Resources\img\welcome_ph_source.png" />
+    <Content Include="Resources\img\zfb.png" />
+    <Content Include="Resources\js\common\fingerprint.js" />
+    <Content Include="Resources\js\common\jquery-1.8.2.js" />
+    <Content Include="Resources\js\common\JQuery.md5.js" />
+    <Content Include="Resources\js\custom\getVideo.js" />
+    <Content Include="Resources\js\custom\getVideoSource.js" />
+    <Content Include="Resources\js\custom\registe.js" />
+    <Content Include="Resources\js\custom\setting.js" />
+    <Content Include="Resources\js\custom\userLogin.js" />
+    <Content Include="Resources\js\custom\userSuggest.js" />
+    <Content Include="Resources\js\custom\Utils.js" />
+    <Content Include="Resources\js\custom\videoManager.js" />
+    <Content Include="Resources\js\utility\getBrowserInfo.js" />
+    <Content Include="Resources\js\utility\welcome.js" />
+    <Content Include="Resources\Plugin\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Resources\Plugin\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Resources\Plugin\bootstrap\css\bootstrap.css" />
+    <Content Include="Resources\Plugin\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Resources\Plugin\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Resources\Plugin\bootstrap\js\bootstrap.js" />
+    <Content Include="Resources\Plugin\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Resources\Plugin\bootstrap\js\npm.js" />
+    <Content Include="Resources\Plugin\jBox\jquery-1.4.2.min.js" />
+    <Content Include="Resources\Plugin\jBox\jquery.jBox-2.2.min.js" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Blue\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Gray\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Green\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Pink\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Purple\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins2\Yellow\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins2\样式说明%28以Green皮肤为例%29.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Blue\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Brown\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Default\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GrayCool\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Gray\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Green\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\GreyBlue\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Purple\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\Red\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBlue\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareBrown\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareGreen\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\SharePurple\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-button1.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-button2.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-close1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-close2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-content-loading.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-icons-ie6.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-icons.png" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-loading1.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-loading2.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-loading3.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\images\jbox-title-icon.gif" />
+    <Content Include="Resources\Plugin\jBox\Skins\ShareRed\jbox.css" />
+    <Content Include="Resources\Plugin\jBox\Skins\样式说明%28以Default皮肤为例%29.css" />
+    <Content Include="Resources\Plugin\WebUploader\MyUpload.js" />
+    <Content Include="Resources\Plugin\WebUploader\Uploader.swf" />
+    <Content Include="Resources\Plugin\WebUploader\webuploader.css" />
+    <Content Include="Resources\Plugin\WebUploader\webuploader.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\HomePartialView.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Teacher\Index.cshtml" />
+    <Content Include="Views\Shared\HomePartialView_2.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Teacher\UploadFilesPage.cshtml" />
+    <Content Include="Views\Teacher\ChooseSubjectPage.cshtml" />
+    <Content Include="Views\Student\PersonalLinePage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2283/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

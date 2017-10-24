@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "个人曲线";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("HomePartialView")
+
+
+<script src="~/Resources/js/common/jquery-1.8.2.js"></script>
+<div class="container" style="margin:100px">
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+		</div>
+		<div class="col-md-4 column">
+            <div id="chart" style="height:400px;width: 600px"></div>
+		</div>
+		<div class="col-md-4 column">
+		</div>
+	</div>
+</div>
+
+
+
+<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts图表
+    var myChart = echarts.init(document.getElementById("chart"));
+    var y=[];
+    function arrTest(){
+        $.ajax({
+            type: "post",
+            async: false,
+            url: "@Url.Content("~/Student/PersonalLine/")",
+            data:{},
+            dataType:"json",
+            success:function(result){
+                if (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        y.push(result[i]);
+                    }
+                }
+            }
+        })
+
+        return y;
+    }
+    arrTest();
+    var option = {
+        title : {
+            text: '成绩曲线',
+            subtext: 'Someone'
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['成绩曲线']
+        },
+        //右上角工具条
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : ['2010','2011','2012','2013','2014','2015','2016','2017']
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value',
+                axisLabel : {
+                    formatter: '{value} '
+                }
+            }
+        ],
+        series : [
+            {
+                name:'成绩曲线',
+                type:'line',
+                data: y,
+                markPoint : {
+                    data : [
+                        {type : 'max', name: '最大值'},
+                        {type : 'min', name: '最小值'}
+                    ]
+                },
+                markLine : {
+                    data : [
+                        {type : 'average', name: '平均值'}
+                    ]
+                }
+            }
+        ]
+    };
+
+    // 为echarts对象加载数据
+    myChart.setOption(option);
+
+</script>
