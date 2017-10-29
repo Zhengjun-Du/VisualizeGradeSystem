@@ -35,3 +35,36 @@ c:\users\imac\documents\visual studio 2012\Projects\VisualizeGradeSystem\Visuali
 c:\users\imac\documents\visual studio 2012\Projects\VisualizeGradeSystem\VisualizeGradeSystem\bin\NPOI.OpenXml4Net.dll
 c:\users\imac\documents\visual studio 2012\Projects\VisualizeGradeSystem\VisualizeGradeSystem\bin\NPOI.OpenXmlFormats.dll
 c:\users\imac\documents\visual studio 2012\Projects\VisualizeGradeSystem\VisualizeGradeSystem\bin\ICSharpCode.SharpZipLib.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\VisualizeGradeSystem.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\VisualizeGradeSystem.pdb
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\Antlr3.Runtime.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\EntityFramework.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\Microsoft.Web.Infrastructure.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\Newtonsoft.Json.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.Mvc.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.Optimization.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.Providers.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.Razor.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.WebPages.Deployment.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.WebPages.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.WebPages.Razor.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\WebGrease.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\ICSharpCode.SharpZipLib.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\EntityFramework.xml
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\Newtonsoft.Json.xml
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.Mvc.xml
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.Razor.xml
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.WebPages.xml
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.WebPages.Deployment.xml
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\System.Web.WebPages.Razor.xml
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\zh-Hans\EntityFramework.resources.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\zh-Hans\System.Web.Mvc.resources.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\zh-Hans\System.Web.Providers.resources.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\zh-Hans\System.Web.Razor.resources.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\zh-Hans\System.Web.WebPages.resources.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\obj\Debug\VisualizeGradeSystem.csprojResolveAssemblyReference.cache
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\obj\Debug\VisualizeGradeSystem.dll
+E:\我的项目\学生成绩可视化系统\VisualizeGradeSystem\VisualizeGradeSystem\obj\Debug\VisualizeGradeSystem.pdb

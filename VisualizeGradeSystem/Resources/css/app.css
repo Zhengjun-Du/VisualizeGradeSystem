@@ -153,6 +153,7 @@
         display: block;
         width:400px;
         height:50px;
+        border-bottom:2px solid white;
     }
    #welcome_ph {
          display:none;
@@ -312,4 +313,8 @@
     background-image:url(/Image/backLoginImg.jpg); 
     background-size:cover;
     
+}
+
+.heading {
+    font-family:'Microsoft YaHei' !important;
 }
